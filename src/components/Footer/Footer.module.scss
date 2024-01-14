@@ -1,0 +1,120 @@
+.root {
+  display: grid;
+  grid-template-columns: 480px 1fr;
+
+  .left {
+    background-color: #c2d8cc;
+    color: #1e4844;
+    .container {
+      max-width: 1310px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 65px;
+      .links {
+        padding-top: 64px;
+        .item {
+          .link {
+            font-size: 2.3rem;
+            line-height: 3rem;
+            margin-bottom: 6px;
+          }
+        }
+      }
+      .social {
+        display: flex;
+        margin-top: 16px;
+
+        .img {
+          margin-right: 8px;
+        }
+      }
+      .payment {
+        display: flex;
+        margin-top: 30px;
+        margin-bottom: 70px;
+      }
+      .copyright {
+        span {
+          display: block;
+          font-size: 1.4rem;
+          line-height: 1.8rem;
+        }
+      }
+    }
+  }
+  .right {
+    .upper {
+      background-image: url("/img/footer/vector.svg");
+      background-repeat: no-repeat;
+      background-size: 960px;
+      background-position: left bottom;
+      .content {
+        padding: 65px 0 65px 65px;
+        .title {
+          color: #c2d8cc;
+          font-size: 2.3rem;
+          line-height: 3rem;
+        }
+        .text {
+          font-size: 1.6rem;
+          line-height: 2.1rem;
+          margin: 15px auto;
+        }
+        .form {
+          margin-bottom: 113px;
+          .input {
+            background-color: inherit;
+            font-size: 1.6rem;
+            line-height: 2.1rem;
+            padding: 15px 0;
+            border-bottom: 2px solid #ffffff;
+            margin-right: 32px;
+            width: 300px;
+            &::placeholder {
+              color: #ffffff;
+            }
+          }
+          .button {
+            border: 2px solid #ffffff;
+            border-radius: 0 50px 50px 0px;
+            padding: 15px 57px;
+            font-size: 1.4rem;
+            line-height: 1.9rem;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    .lower {
+      background-color: #fae9d6;
+      padding-bottom: 63px;
+      margin-top: -3px;
+      .content {
+        padding: 32px 65px 32px 65px;
+        display: flex;
+        .title {
+          color: #1e4844;
+          font-weight: 700;
+          font-size: 2.3rem;
+          line-height: 3rem;
+          margin-right: 107px;
+        }
+        .info {
+          display: flex;
+          flex-direction: column;
+          .text {
+            color: #1e4844;
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+            &:first-of-type {
+              margin-bottom: 16px;
+            }
+            &:last-of-type {
+              margin-bottom: 64px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
