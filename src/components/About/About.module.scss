@@ -1,0 +1,25 @@
+.root {
+  background-color: #c15244;
+  color: #fae9d6;
+  background-image: url("/img/about/item.png");
+  background-repeat: no-repeat;
+  background-size: 48%;
+  background-position: 100% 20%;
+  .container {
+    padding-left: 65px;
+    .title {
+      font-size: 4.2rem;
+      line-height: 4.6rem;
+      padding-top: 263px;
+      padding-bottom: 13px;
+    }
+    .text {
+      font-size: 1.9rem;
+      line-height: 2.5rem;
+      padding-bottom: 17px;
+      &:last-of-type {
+        padding-bottom: 462px;
+      }
+    }
+  }
+}

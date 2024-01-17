@@ -1,7 +1,8 @@
-import { Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.scss";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import Main from "./pages/Main";
 
 function App() {
   return (
@@ -10,7 +11,9 @@ function App() {
         <Header />
       </div>
       <div className="main">
-        <Routes></Routes>
+        <Routes>
+          <Route path="/" element={<Main />} />
+        </Routes>
       </div>
       <div className="footer">
         <Footer />
