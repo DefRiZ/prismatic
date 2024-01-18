@@ -1,0 +1,45 @@
+.root {
+  background-color: #fae9d6;
+  .container {
+    padding: 65px;
+    max-width: 1310px;
+    margin: 0 auto;
+    color: #1e4844;
+    background-image: url("/img/press/decoration.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 60%;
+    .title {
+      color: #332b5b;
+      font-size: 1.8rem;
+      line-height: 2.5rem;
+      padding-top: 64px;
+      margin-bottom: 409px;
+      text-align: center;
+    }
+
+    .link {
+      display: block;
+      text-decoration: underline;
+      font-size: 1.3rem;
+      line-height: 1.7rem;
+      margin-bottom: 80px;
+      position: relative;
+      left: 26%;
+    }
+    .text {
+      font-size: 2.6rem;
+      line-height: 2.8rem;
+      max-width: 689px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .author {
+      display: block;
+      font-size: 1.6rem;
+      line-height: 2.1rem;
+      text-align: center;
+      margin: 10px auto 163px auto;
+    }
+  }
+}
