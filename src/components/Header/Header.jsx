@@ -1,9 +1,13 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
 import styles from "./Header.module.scss";
 
 import logo from "../../img/header/Vector.svg";
-import { Link } from "react-router-dom";
+import HeaderDrawer from "../HeaderDrawer/HeaderDrawer";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
   return (
     <header className={styles.root}>
       <div className={styles.upper}>
@@ -43,8 +47,12 @@ const Header = () => {
             <Link className={styles.link} to="/">
               Cart
             </Link>
+            <div onClick={() => setIsOpen(!isOpen)} className={styles.drawer}>
+              <span></span>
+            </div>
           </div>
         </div>
+        {isOpen && <HeaderDrawer isOpen={isOpen} setIsOpen={setIsOpen} />}
       </div>
     </header>
   );

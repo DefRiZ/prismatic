@@ -5,20 +5,45 @@
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: 100% 20%;
+  @media (max-width: 760px) {
+    background-position: 100% 75%;
+  }
+  @media (max-width: 490px) {
+    background-position: 100% 50%;
+  }
   .container {
     padding-left: 65px;
+    @media (max-width: 490px) {
+      padding-left: 10px;
+    }
     .title {
       font-size: 4.2rem;
       line-height: 4.6rem;
       padding-top: 263px;
       padding-bottom: 13px;
+      @media (max-width: 600px) {
+        padding-top: 100px;
+      }
     }
     .text {
       font-size: 1.9rem;
       line-height: 2.5rem;
       padding-bottom: 17px;
+      @media (max-width: 760px) {
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+      }
+      &:nth-last-of-type(2) {
+        display: none;
+      }
       &:last-of-type {
         padding-bottom: 462px;
+        @media (max-width: 760px) {
+          padding-bottom: 150px;
+        }
+        @media (max-width: 600px) {
+          padding-bottom: 100px;
+        }
       }
     }
   }

@@ -6,10 +6,21 @@
       background-repeat: no-repeat;
       background-position-y: 100%, 104%;
       background-size: contain, cover;
+      @media (max-width: 775px) {
+        background-position-x: 100%, 50%;
+      }
+      @media (max-width: 700px) {
+        background-position-x: 100%, 12%;
+      }
       .container {
         padding-top: 91px;
         padding-left: 65px;
-        padding-bottom: 255px;
+        padding-bottom: 254px;
+        @media (max-width: 700px) {
+          padding-top: 50px;
+          padding-left: 30px;
+          padding-bottom: 190px;
+        }
         .title {
           font-size: 4.2rem;
           line-height: 4.6rem;
@@ -32,6 +43,9 @@
       align-items: center;
       padding-top: 23px;
       padding-bottom: 30px;
+      @media (max-width: 1200px) {
+        flex-wrap: wrap;
+      }
       .popsugar {
         margin: auto 15px;
       }
