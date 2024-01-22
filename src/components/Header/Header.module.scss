@@ -28,6 +28,9 @@
       .navigation {
         .list {
           display: flex;
+          @media (max-width: 735px) {
+            display: none;
+          }
           .item {
             &:last-of-type {
               .link {
@@ -38,6 +41,9 @@
               font-size: 1.6rem;
               line-height: 1.8rem;
               margin-right: 32px;
+              @media (max-width: 775px) {
+                margin-right: 14px;
+              }
             }
           }
         }
@@ -52,6 +58,43 @@
         .link {
           font-size: 1.4rem;
           line-height: 1.8rem;
+          @media (max-width: 735px) {
+            display: none;
+          }
+        }
+      }
+      .drawer {
+        display: none;
+        z-index: 30;
+        align-items: center;
+        justify-content: flex-end;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+        position: relative;
+        span {
+          display: inline-block;
+          height: 2px;
+          width: 80%;
+          background-color: #ffffff;
+        }
+        &::before,
+        &::after {
+          position: absolute;
+          content: "";
+          height: 2px;
+          width: 27px;
+          background-color: #ffffff;
+        }
+        &::before {
+          top: 0px;
+        }
+
+        &::after {
+          bottom: 0px;
+        }
+        @media (max-width: 735px) {
+          display: flex;
         }
       }
     }

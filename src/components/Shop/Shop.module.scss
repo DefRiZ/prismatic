@@ -1,6 +1,9 @@
 .root {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  @media (max-width: 775px) {
+    display: block;
+  }
   .light,
   .dark {
     .container {
@@ -16,6 +19,11 @@
       margin-bottom: 63px;
       font-size: 1.9rem;
       line-height: 2.5rem;
+      @media (max-width: 1200px) {
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+      }
     }
   }
   .light {
@@ -23,11 +31,31 @@
     background-image: url("/img/shop/light.png");
     background-repeat: no-repeat;
     background-size: cover;
+    @media (max-width: 1277px) {
+      background-position: 50%;
+      padding-top: 386px;
+    }
+    @media (max-width: 775px) {
+      background-position: bottom;
+    }
+    @media (max-width: 550px) {
+      padding-top: 160px;
+    }
   }
   .dark {
     padding-top: 500px;
     background-image: url("/img/shop/dark.png");
     background-repeat: no-repeat;
     background-size: cover;
+    @media (max-width: 1277px) {
+      background-position: 50%;
+      padding-top: 360px;
+    }
+    @media (max-width: 775px) {
+      background-position: bottom;
+    }
+    @media (max-width: 550px) {
+      padding-top: 160px;
+    }
   }
 }

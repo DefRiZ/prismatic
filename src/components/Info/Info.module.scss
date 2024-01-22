@@ -1,28 +1,57 @@
 .root {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
   .background {
     background-color: #332b5b;
     background-image: url("/img/about/info.png");
     background-repeat: no-repeat;
     background-size: cover;
+    @media (max-width: 1200px) {
+      background-position: 50%;
+    }
+    @media (max-width: 900px) {
+      display: none;
+    }
   }
   .info {
     color: #fae9d6;
+    @media (max-width: 900px) {
+      background-image: url("/img/about/info.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50%;
+    }
     .container {
       padding: 0 65px;
+      @media (max-width: 400px) {
+        padding: 0 30px;
+      }
       .title {
         font-size: 4.2rem;
         line-height: 4.6rem;
         font-weight: 700;
         padding-top: 158px;
         padding-bottom: 14px;
+        @media (max-width: 1200px) {
+          padding-top: 33px;
+        }
+        @media (max-width: 760px) {
+          font-size: 3.4rem;
+          line-height: 3.9rem;
+        }
       }
       .text {
         font-size: 1.9rem;
         line-height: 2.5rem;
         max-width: 588px;
         padding-bottom: 45px;
+        @media (max-width: 760px) {
+          font-size: 1.4rem;
+          line-height: 1.9rem;
+        }
       }
       .benefits {
         .list {
@@ -37,11 +66,18 @@
             line-height: 2.5rem;
             display: block;
             max-width: 235px;
+            @media (max-width: 760px) {
+              font-size: 1.4rem;
+              line-height: 1.9rem;
+            }
           }
         }
       }
       .button {
         padding-bottom: 145px;
+        @media (max-width: 1200px) {
+          padding-bottom: 33px;
+        }
       }
     }
   }

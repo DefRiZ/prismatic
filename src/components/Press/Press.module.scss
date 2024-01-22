@@ -16,6 +16,12 @@
       line-height: 2.5rem;
       margin-bottom: 405px;
       text-align: center;
+      @media (max-width: 1000px) {
+        margin-bottom: 150px;
+      }
+      @media (max-width: 500px) {
+        margin-bottom: 0px;
+      }
     }
 
     .link {
@@ -26,6 +32,43 @@
       margin-bottom: 80px;
       position: relative;
       left: 25%;
+      @media (max-width: 1000px) {
+        left: 22%;
+        top: 76px;
+        margin-bottom: 70px;
+      }
+      @media (max-width: 700px) {
+        left: 20%;
+        top: 100px;
+        margin-bottom: 70px;
+      }
+      @media (max-width: 600px) {
+        left: 18%;
+        top: 100px;
+        font-size: 1rem;
+        line-height: 1.3rem;
+      }
+      @media (max-width: 600px) {
+        left: 14%;
+        top: 110px;
+      }
+      @media (max-width: 450px) {
+        font-size: 0.8rem;
+        line-height: 1.1rem;
+        top: 90px;
+      }
+      @media (max-width: 390px) {
+        left: 10%;
+        top: 110px;
+      }
+      @media (max-width: 355px) {
+        left: 7%;
+        top: 110px;
+      }
+      @media (max-width: 330px) {
+        left: 4%;
+        top: 115px;
+      }
     }
     .text {
       font-size: 2.6rem;
@@ -33,6 +76,20 @@
       max-width: 689px;
       margin: 0 auto;
       text-align: center;
+      @media (max-width: 1000px) {
+        font-size: 2rem;
+        line-height: 2.2rem;
+        position: relative;
+        top: 76px;
+      }
+      @media (max-width: 600px) {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+      @media (max-width: 450px) {
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+      }
     }
     .author {
       display: block;
@@ -40,6 +97,13 @@
       line-height: 2.1rem;
       text-align: center;
       margin: 10px auto 163px auto;
+      position: relative;
+      top: 76px;
+      font-size: 1.3rem;
+      line-height: 1.6rem;
+      @media (max-width: 500px) {
+        margin: 10px auto 90px auto;
+      }
     }
   }
 }
