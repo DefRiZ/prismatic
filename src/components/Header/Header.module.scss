@@ -32,6 +32,10 @@
             display: none;
           }
           .item {
+            transition-duration: 0.5s;
+            &:hover {
+              scale: 1.1;
+            }
             &:last-of-type {
               .link {
                 margin-right: 0;
@@ -53,8 +57,13 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        cursor: pointer;
       }
       .cart {
+        transition-duration: 0.5s;
+        &:hover {
+          scale: 1.1;
+        }
         .link {
           font-size: 1.4rem;
           line-height: 1.8rem;

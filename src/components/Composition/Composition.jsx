@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+import { textAnimation } from "../../animations";
 import styles from "./Composition.module.scss";
 
 import image from "../../img/composition/image.svg";
@@ -9,9 +11,39 @@ const Composition = () => {
       <div className={styles.container}>
         <div className={styles.left}>
           <ul className={styles.list}>
-            <li className={styles.component}>Adaptogenic Herbs & Mushrooms</li>
-            <li className={styles.component}>Cannabinoids</li>
-            <li className={styles.component}>Edible Essential Oils</li>
+            <motion.li
+              className={styles.component}
+              variants={textAnimation}
+              initial="hidden"
+              whileInView="visible"
+              custom={0.2}
+              transition={{ duration: 0.4, ease: [1, 1, 1, 1] }}
+              viewport={{ once: true }}
+            >
+              Adaptogenic Herbs & Mushrooms
+            </motion.li>
+            <motion.li
+              className={styles.component}
+              variants={textAnimation}
+              initial="hidden"
+              whileInView="visible"
+              custom={0.3}
+              transition={{ duration: 0.4, ease: [1, 1, 1, 1] }}
+              viewport={{ once: true }}
+            >
+              Cannabinoids
+            </motion.li>
+            <motion.li
+              className={styles.component}
+              variants={textAnimation}
+              initial="hidden"
+              whileInView="visible"
+              custom={0.4}
+              transition={{ duration: 0.4, ease: [1, 1, 1, 1] }}
+              viewport={{ once: true }}
+            >
+              Edible Essential Oils
+            </motion.li>
           </ul>
         </div>
         <div className={styles.right}>
@@ -19,13 +51,20 @@ const Composition = () => {
             <img src={image} alt="design" />
           </div>
 
-          <p className={styles.text}>
+          <motion.p
+            className={styles.text}
+            variants={textAnimation}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.4, ease: [1, 1, 1, 1] }}
+            viewport={{ once: true }}
+          >
             Adaptogens naturally heal the body’s response to stress. Why? These
             non-toxic herbs (think Ashwagandha, Rhodiola, Reishi Mushroom, and
             White Asian Ginseng) flourish in stressful environmental conditions.
             Their resilience transfers to your body, so you can better adapt to
             your environmental stressors.
-          </p>
+          </motion.p>
         </div>
       </div>
     </section>

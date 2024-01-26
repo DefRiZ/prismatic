@@ -1,7 +1,13 @@
+import { motion } from "framer-motion";
+import { forwardRef } from "react";
 import styles from "./Button.module.scss";
 
-const Button = ({ children }) => {
-  return <button className={styles.button}>{children}</button>;
-};
+export const Button = forwardRef(({ children }, ref) => {
+  return (
+    <button className={styles.button} ref={ref}>
+      {children}
+    </button>
+  );
+});
 
-export default Button;
+export const MButton = motion(Button);
