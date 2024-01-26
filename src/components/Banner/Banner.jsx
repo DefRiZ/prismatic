@@ -1,5 +1,7 @@
-import Button from "../Button/Button";
+import { MButton } from "../Button/Button";
 import styles from "./Banner.module.scss";
+import { motion } from "framer-motion";
+import { imgAnimation, textAnimation } from "../../animations";
 
 import forbes from "../../img/banner/forbes.svg";
 import rolling from "../../img/banner/rolling.svg";
@@ -9,36 +11,69 @@ import popsugar from "../../img/banner/porsugar.svg";
 import elle from "../../img/banner/elle.svg";
 import gq from "../../img/banner/gq.svg";
 import fast from "../../img/banner/fast.svg";
+
+const images = [forbes, rolling, allure, byrdie, popsugar, elle, gq, fast];
+
 const Banner = () => {
   return (
-    <section className={styles.root}>
+    <motion.section className={styles.root}>
       <div className={styles.upper}>
         <div className={styles.background}>
           <div className={styles.container}>
-            <h1 className={styles.title}>
+            <motion.h1
+              className={styles.title}
+              variants={textAnimation}
+              initial="hidden"
+              whileInView="visible"
+              custom={0.2}
+              transition={{ duration: 0.4, ease: [1, 1, 1, 1] }}
+              viewport={{ once: true }}
+            >
               Potent Plant Elixirs for <br /> Body & Spirit
-            </h1>
-            <p className={styles.text}>
+            </motion.h1>
+            <motion.p
+              className={styles.text}
+              variants={textAnimation}
+              initial="hidden"
+              whileInView="visible"
+              custom={0.4}
+              transition={{ duration: 0.4, ease: [1, 1, 1, 1] }}
+              viewport={{ once: true }}
+            >
               Tinctures of balancing adaptogens, <br /> healing cannabinoids
               &#40;CBD, CBDa, <br /> CBN&#41;, and mood-enhancing terpenes
-            </p>
-            <Button className={styles.button}>Shop our Products</Button>
+            </motion.p>
+            <MButton
+              className={styles.button}
+              variants={textAnimation}
+              initial="hidden"
+              whileInView="visible"
+              custom={0.6}
+              transition={{ duration: 0.4, ease: [1, 1, 1, 1] }}
+              viewport={{ once: true }}
+            >
+              Shop our Products
+            </MButton>
           </div>
         </div>
       </div>
       <div className={styles.lower}>
-        <div className={styles.content}>
-          <img src={forbes} alt="forbes" />
-          <img src={rolling} alt="rolling" />
-          <img src={allure} alt="allure" />
-          <img src={byrdie} alt="byrdie" />
-          <img className={styles.popsugar} src={popsugar} alt="popsugar" />
-          <img src={elle} alt="elle" />
-          <img src={gq} alt="gq" />
-          <img src={fast} alt="fast" />
-        </div>
+        <motion.div className={styles.content}>
+          {images.map((el, i) => (
+            <motion.img
+              src={el}
+              alt="item"
+              key={i}
+              variants={imgAnimation}
+              initial="hidden"
+              whileInView="visible"
+              custom={i}
+              viewport={{ amount: 0.9, once: true }}
+            />
+          ))}
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,5 +1,8 @@
+import { motion } from "framer-motion";
+import { textAnimation } from "../../animations";
+import { Button } from "../Button/Button";
 import styles from "./Info.module.scss";
-import Button from "../Button/Button";
+
 const Info = () => {
   return (
     <section className={styles.root}>
@@ -7,7 +10,14 @@ const Info = () => {
       <div className={styles.info}>
         <div className={styles.container}>
           <h2 className={styles.title}>Not Your Average Hemp</h2>
-          <p className={styles.text}>
+          <motion.p
+            className={styles.text}
+            variants={textAnimation}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.4, ease: [1, 1, 1, 1] }}
+            viewport={{ once: true }}
+          >
             Our hemp is organically grown and then expertly extracted using the
             whole plant- mainly the flower, not just stalks and leaves. This
             creates a potent, ultra-pure, full-spectrum extract with
@@ -15,17 +25,55 @@ const Info = () => {
             methodologies damage the plant in favor of quick mass production. We
             take care of our hemp by processing it slowly to yield the most
             efficacious medicine possible.
-          </p>
+          </motion.p>
           <div className={styles.benefits}>
             <div className={styles.list}>
-              <span className={styles.item}>Organic Full Spectrum Hemp</span>
-              <span className={styles.item}>
+              <motion.span
+                className={styles.item}
+                variants={textAnimation}
+                initial="hidden"
+                whileInView="visible"
+                transition={{ duration: 0.4, ease: [1, 1, 1, 1] }}
+                custom={0.1}
+                viewport={{ once: true }}
+              >
+                Organic Full Spectrum Hemp
+              </motion.span>
+              <motion.span
+                className={styles.item}
+                variants={textAnimation}
+                initial="hidden"
+                whileInView="visible"
+                transition={{ duration: 0.4, ease: [1, 1, 1, 1] }}
+                custom={0.2}
+                viewport={{ once: true }}
+              >
                 Potent Medicinal Cannabinoid Profile
-              </span>
+              </motion.span>
             </div>
             <div className={styles.list}>
-              <span className={styles.item}>Premium Extraction</span>
-              <span className={styles.item}>No High, Just Bliss</span>
+              <motion.span
+                className={styles.item}
+                variants={textAnimation}
+                initial="hidden"
+                whileInView="visible"
+                transition={{ duration: 0.4, ease: [1, 1, 1, 1] }}
+                custom={0.3}
+                viewport={{ once: true }}
+              >
+                Premium Extraction
+              </motion.span>
+              <motion.span
+                className={styles.item}
+                variants={textAnimation}
+                initial="hidden"
+                whileInView="visible"
+                transition={{ duration: 0.4, ease: [1, 1, 1, 1] }}
+                custom={0.4}
+                viewport={{ once: true }}
+              >
+                No High, Just Bliss
+              </motion.span>
             </div>
           </div>
           <div className={styles.button}>

@@ -16,6 +16,10 @@
       .links {
         padding-top: 64px;
         .item {
+          transition-duration: 0.5s;
+          &:hover {
+            scale: 1.1;
+          }
           .link {
             font-size: 2.3rem;
             line-height: 3rem;
@@ -29,6 +33,11 @@
 
         .img {
           margin-right: 8px;
+          cursor: pointer;
+          transition-duration: 0.5s;
+          &:hover {
+            scale: 1.1;
+          }
         }
       }
       .payment {
@@ -94,6 +103,10 @@
             font-size: 1.4rem;
             line-height: 1.9rem;
             font-weight: 700;
+            transition-duration: 0.5s;
+            &:hover {
+              scale: 1.1;
+            }
             @media (max-width: 900px) {
               margin-top: 30px;
             }
