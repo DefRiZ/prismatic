@@ -1,1 +1,1 @@
-Adapted dietary supplement's landing page.
+Adapted dietary supplements landing page.
